@@ -1,0 +1,83 @@
+/* Reset dasar */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    background-color:#fdd835;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Gaya konten */
+.content1, .content2, .content3,.content4 {
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    border-left: 5px solid #000;
+    border-bottom: 5px solid #000;
+    background: linear-gradient(to bottom right, #fff9c4, #fdd835);
+}
+
+
+
+/* Gaya gambar */
+.content1 .image img, .content4 .image img {
+    width: 300px; /* Lebar tetap */
+    height: 200px; /* Tinggi tetap */
+    object-fit: cover; /* Potong gambar jika proporsi tidak sesuai */
+    border-radius: 10px; /* Tambahkan sudut melengkung jika diperlukan */
+    margin: 0 auto;
+    display: block;
+}
+.content2 .image img, .content3 .image img{
+    width: 300px; /* Lebar tetap */
+    height: 300px;
+    /* object-fit: cover; Potong gambar jika proporsi tidak sesuai */
+    border-radius: 10px; /* Tambahkan sudut melengkung jika diperlukan */
+    margin: 0 auto;
+    display: block;
+}
+
+
+/* Gaya paragraf */
+.content1 p, .content2 p, .content3 p, .content4 p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .content1 .row, .content2 .row, .content3 .row, .content4 ,.row {
+        flex-direction: column; /* Tumpuk vertikal */
+        text-align: center; /* Teks di tengah */
+    }
+
+    .content1 .col-md-6, .content2 .col-md-6, .content3 .col-md-6, .content4 .col-md-6{
+        width: 100%; /* Lebar penuh */
+        max-width: 100%; /* Tidak melebihi layar */
+    }
+
+    .content1 .image img,   .content4 .image img {
+        margin: 0 auto 15px; /* Gambar di tengah */
+        width: 100%; /* Lebar penuh layar */
+        /* height: auto; Tinggi mengikuti proporsi gambar */
+        height: 300px; /* Tinggi mengikuti proporsi gambar */
+        max-width: 300px; /* Batas maksimum lebar */
+    }
+    .content2 .image img,.content3 .image img{
+        margin: 0 auto 15px; /* Gambar di tengah */
+        width: 300px; /* Lebar penuh layar */
+        height: 400px; /* Tinggi mengikuti proporsi gambar */
+        max-width: 400px; /* Batas maksimum lebar */
+    }
+
+    .content1 p, .content2 p, .content3 p, .content4 p {
+        font-size: 1rem;
+        margin-top: 10px; /* Jarak antara gambar dan teks */
+    }
+}
